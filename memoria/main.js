@@ -49,5 +49,19 @@ function kattintas(KEPEKLISTA) {
 }
 
 
+function kever(randomTomb) {
+    let index; 
+    let temp;
+    for (let i = randomTomb.length - 1; i > 0; i--) {
+        index = Math.floor(Math.random() * (i + 1));
+        temp = randomTomb[i];
+        randomTomb[i] = randomTomb[index];
+        randomTomb[index] = temp;
+    }
+    return randomTomb;
+}
+
+
+let kepekKeverve = kever(KEPEKLISTA);
 
 
